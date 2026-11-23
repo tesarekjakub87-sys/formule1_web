@@ -1,0 +1,252 @@
+
+/* Barevne schema */
+:root {
+    --primary: #e10600;
+    --background: #111111;
+    --surface: #1c1c1c;
+    --text: #ffffff;
+    --text-muted: #bdbdbd;
+}
+
+/* Zakladni nastaveni */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cela stranka */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Hlavicka */
+header {
+    background-color: #000000;
+    padding: 20px 40px;
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: 32px;
+}
+
+/* Navigace */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary);
+}
+
+/* Hlavni obsah */
+main {
+    padding: 40px;
+    min-height: 70vh;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Obrazky */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Seznamy */
+ul {
+    margin-left: 25px;
+}
+
+/* Karty tymu */
+.tymy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tymy article {
+    background-color: var(--surface);
+    padding: 20px;
+    width: 30%;
+    border-left: 4px solid var(--primary);
+}
+
+.tymy article h3 {
+    color: var(--primary);
+}
+
+/* Tabulka */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #555555;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: var(--surface);
+}
+
+/* Kontaktni formular */
+.kontakt form {
+    max-width: 500px;
+}
+
+.kontakt label {
+    display: block;
+    margin-top: 15px;
+}
+
+.kontakt input,
+.kontakt textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid #777777;
+}
+
+.kontakt textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.kontakt button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.kontakt button:hover {
+    background-color: #b80000;
+}
+
+/* Odkazy */
+a {
+    color: #ff4545;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Viditelny focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+/* Paticka */
+footer {
+    background-color: #000000;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responzivita - tablet */
+@media (max-width: 1024px) {
+
+    .tymy article {
+        width: 45%;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+}
+
+/* Responzivita - mobil */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .tymy article {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+}
+/* Tlacitko na uvodni strance */
+.tlacitko {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.tlacitko:hover {
+    background-color: #b80000;
+}
